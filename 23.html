@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин бытовой химии</title>
+    
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+ 
+
+    <header>
+        <h1>Магазин бытовой химии</h1>
+        <input type="text" id="searchInput" placeholder="Поиск товаров...">
+    </header>
+    <div id="productList">
+        <!-- Сюда будут добавлены товары -->
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css border-color:#7d2717" href="styles">
+</body>
+</html>
+<script type="text/javascript"> 
+    const products = [
+
+    { name: "Моющее средство", price: 100, image: "1.jpg" },
+    { name: "Средство для стекол", price: 150, image: "2.jpg" },
+    { name: "Чистящее средство", price: 250, image: "3.jpg" },
+    { name: "Средство от Грязи", price: 299, image: "5.jpg" },
+    { name: "Салфетки", price: 380, image: "6.jpg" },
+    { name: "Перчатки для уборки", price: 200, image: "7.jpg" },
+    { name: "Перчатки для уборки", price: 299, image: "Перчатки.jpg" },
+
+
+
+    // Добавьте больше товаров по аналогии
+];
+
+const productList = document.getElementById("productList");
+
+function renderProducts(products) {
+    productList.innerHTML = "";
+    products.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+
+        const productImage = document.createElement("img");
+        productImage.src = product.image;
+        productImage.alt = product.name;
+
+        const productName = document.createElement("h2");
+        productName.textContent = product.name;
+
+        const productPrice = document.createElement("p");
+        productPrice.textContent = `Цена: ${product.price} руб.`;
+
+        productCard.appendChild(productImage);
+        productCard.appendChild(productName);
+        productCard.appendChild(productPrice);
+
+        productList.appendChild(productCard);
+    });
+}
+
+renderProducts(products);
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", function(event) {
+    const searchString = event.target.value.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchString)
+    );
+    renderProducts(filteredProducts);
+});
+
+
+searchInput.addEventListener("input", function(event) {
+    const searchString = event.target.value.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchString)
+    );
+    renderProducts(filteredProducts);
+});
+
+// Добавим функцию для очистки строки поиска и отображения всех товаров
+function clearSearch() {
+    searchInput.value = ""; // Очищаем строку поиска
+    renderProducts(products); // Отображаем все товары
+}
+
+// Добавим обработчик события для кнопки очистки поиска
+const clearButton = document.createElement("button");
+clearButton.textContent = "Очистить поиск";
+clearButton.addEventListener("click", clearSearch);
+document.body.insertBefore(clearButton, productList);
+
+
+
+
+function renderProducts(products) {
+    productList.innerHTML = "";
+    products.forEach(product => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+        productCard.addEventListener("click", () => {
+            // этот товар бомбовый возьми его вац
+            //
+        });
+
+        const productImage = document.createElement("img");
+        productImage.src = product.image;
+        productImage.alt = product.name;
+
+        const productName = document.createElement("h2");
+        productName.textContent = product.name;
+
+        const productPrice = document.createElement("p");
+        productPrice.textContent = `Цена: ${product.price} руб.`;
+
+        productCard.appendChild(productImage);
+        productCard.appendChild(productName);
+        productCard.appendChild(productPrice);
+
+        productList.appendChild(productCard);
+    });
+}
+ 
+
+
+   
+
+</script>
+
+
+
+    
+
+
