@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 199px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Стили для основного контейнера */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Стили для строки поиска */
+#searchInput {
+    padding: 10px;
+    width: 350px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Стили для карточек товаров */
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 15px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 10px); /* Расчет ширины для карточек товаров с отступами */
+    margin: 8px;
+    padding: 1px;
+    text-align: center;
+    transition: box-shadow 0,8s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Эффект при наведении на карточку товара */
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.product-card {
+    transition: transform 0.3s ease; /* Плавное изменение при наведении */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Увеличение размера карточки при наведении */
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    /* Стили для мобильных устройств */
+    .product-card {
+        width: calc(80% - 800px); /* Уменьшение ширины карточек на мобильных устройствах */
+    }
+}
+
+
+
+
+a {
+    color: #007bff; /* Цвет ссылок */
+    text-decoration: none; /* Удаление подчеркивания ссылок */
+}
+
+button {
+    background-color: #007bff; /* Цвет фона кнопок */
+    color: white; /* Цвет текста на кнопках */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет фона кнопок при наведении */
+}
+
+
+
+
+
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-image: url('4.jpg');
+    background-size: cover;
+    background-position: center;
+    
+
+
+}
+
+
+
